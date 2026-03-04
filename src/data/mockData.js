@@ -1,3 +1,126 @@
+export const companies = [
+    {
+        id: 'apple',
+        name: 'Apple',
+        logo: '🍎',
+        color: 'from-gray-500 to-gray-700',
+        description: 'Think Different. Design and hardware engineering focus.',
+        roles: [
+            { id: 'ui-designer', title: 'UI Designer' },
+            { id: 'ios-engineer', title: 'iOS Engineer' },
+            { id: 'hardware-engineer', title: 'Hardware Engineer' }
+        ]
+    },
+    {
+        id: 'google',
+        name: 'Google',
+        logo: '🔍',
+        color: 'from-blue-500 to-red-500',
+        description: 'Organize the worlds information. Algorithmic and scale focus.',
+        roles: [
+            { id: 'software-engineer', title: 'Software Engineer' },
+            { id: 'product-manager', title: 'Product Manager' },
+            { id: 'data-scientist', title: 'Data Scientist' }
+        ]
+    },
+    {
+        id: 'infosys',
+        name: 'Infosys',
+        logo: '🔷',
+        color: 'from-blue-600 to-blue-800',
+        description: 'Navigate your next. IT consulting and service delivery.',
+        roles: [
+            { id: 'systems-engineer', title: 'Systems Engineer' },
+            { id: 'business-analyst', title: 'Business Analyst' },
+            { id: 'technology-analyst', title: 'Technology Analyst' }
+        ]
+    },
+    {
+        id: 'wipro',
+        name: 'Wipro',
+        logo: '🌈',
+        color: 'from-cyan-500 to-blue-600',
+        description: 'Spirit of Wipro. Technology services and consulting.',
+        roles: [
+            { id: 'project-engineer', title: 'Project Engineer' },
+            { id: 'java-developer', title: 'Java Developer' },
+            { id: 'cloud-architect', title: 'Cloud Architect' }
+        ]
+    },
+    {
+        id: 'cts',
+        name: 'Cognizant (CTS)',
+        logo: '🌐',
+        color: 'from-blue-700 to-indigo-900',
+        description: 'Intuition engineered. Digital transformation focus.',
+        roles: [
+            { id: 'programmer-analyst', title: 'Programmer Analyst' },
+            { id: 'qa-engineer', title: 'QA Engineer' },
+            { id: 'scrum-master', title: 'Scrum Master' }
+        ]
+    },
+    {
+        id: 'tcs',
+        name: 'TCS',
+        logo: '🏢',
+        color: 'from-sky-500 to-blue-700',
+        description: 'Building on belief. IT services, consulting and business solutions.',
+        roles: [
+            { id: 'assistant-system-engineer', title: 'Assistant System Engineer' },
+            { id: 'digital-specialist', title: 'Digital Specialist' },
+            { id: 'data-engineer', title: 'Data Engineer' }
+        ]
+    },
+    {
+        id: 'microsoft',
+        name: 'Microsoft',
+        logo: '🪟',
+        color: 'from-blue-500 to-cyan-500',
+        description: 'Empowering others. OS, cloud, and enterprise software.',
+        roles: [
+            { id: 'sde', title: 'Software Development Engineer' },
+            { id: 'program-manager', title: 'Program Manager' },
+            { id: 'cloud-solution-architect', title: 'Cloud Solution Architect' }
+        ]
+    },
+    {
+        id: 'amazon',
+        name: 'Amazon',
+        logo: '📦',
+        color: 'from-orange-400 to-yellow-600',
+        description: 'Customer obsession. E-commerce and cloud computing.',
+        roles: [
+            { id: 'sde2', title: 'Software Dev Engineer II' },
+            { id: 'aws-architect', title: 'AWS Solutions Architect' },
+            { id: 'data-engineer', title: 'Data Engineer' }
+        ]
+    },
+    {
+        id: 'meta',
+        name: 'Meta',
+        logo: '♾️',
+        color: 'from-blue-600 to-indigo-600',
+        description: 'Connecting people. Social media and virtual reality.',
+        roles: [
+            { id: 'frontend-engineer', title: 'Frontend Engineer' },
+            { id: 'backend-engineer', title: 'Backend Engineer' },
+            { id: 'machine-learning-engineer', title: 'Machine Learning Engineer' }
+        ]
+    },
+    {
+        id: 'netflix',
+        name: 'Netflix',
+        logo: '🍿',
+        color: 'from-red-600 to-red-800',
+        description: 'Entertainment redefined. Streaming and content delivery.',
+        roles: [
+            { id: 'senior-software-engineer', title: 'Senior Software Engineer' },
+            { id: 'data-analytics', title: 'Data Analytics Engineer' },
+            { id: 'ui-engineer', title: 'UI Engineer' }
+        ]
+    }
+];
+
 export const domains = [
     {
         id: 'software-engineering',

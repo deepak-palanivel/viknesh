@@ -1,12 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Mic, BarChart3, User, LogOut } from 'lucide-react';
+import { Menu, X, Mic, BarChart3, User, LogOut, Palette } from 'lucide-react';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [showProfile, setShowProfile] = useState(false);
+    const [showTheme, setShowTheme] = useState(false);
     const location = useLocation();
     const isAuth = location.pathname !== '/' && location.pathname !== '/login';
+
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('app-theme') || 'indigo';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    }, []);
+
+    const handleThemeChange = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('app-theme', theme);
+        setShowTheme(false);
+    };
+
+    const themes = [
+        { id: 'indigo', name: 'Indigo Night', color: '#6366f1' },
+        { id: 'forest', name: 'Emerald Forest', color: '#10b981' },
+        { id: 'rose', name: 'Crimson Rose', color: '#f43f5e' },
+        { id: 'ocean', name: 'Deep Ocean', color: '#06b6d4' }
+    ];
 
     const navLinks = isAuth
         ? [
@@ -38,8 +57,8 @@ export default function Navbar() {
                                 key={link.to}
                                 to={link.to}
                                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2 ${location.pathname === link.to
-                                        ? 'text-primary-300 bg-primary-500/10'
-                                        : 'text-gray-400 hover:text-white hover:bg-white/5'
+                                    ? 'text-primary-300 bg-primary-500/10'
+                                    : 'text-gray-400 hover:text-white hover:bg-white/5'
                                     }`}
                             >
                                 {link.icon && <link.icon className="w-4 h-4" />}
@@ -49,10 +68,38 @@ export default function Navbar() {
                     </div>
 
                     <div className="hidden md:flex items-center gap-3">
+                        {/* Theme Dropdown */}
+                        <div className="relative">
+                            <button
+                                onClick={() => { setShowTheme(!showTheme); setShowProfile(false); }}
+                                className="p-2 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition-all flex items-center justify-center"
+                                title="Change Theme"
+                            >
+                                <Palette className="w-5 h-5" />
+                            </button>
+                            {showTheme && (
+                                <div className="absolute right-0 top-12 w-48 glass-strong rounded-xl p-2 shadow-2xl animate-slide-up">
+                                    <div className="px-3 py-1.5 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
+                                        Select Theme
+                                    </div>
+                                    {themes.map(t => (
+                                        <button
+                                            key={t.id}
+                                            onClick={() => handleThemeChange(t.id)}
+                                            className="w-full text-left px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all flex items-center gap-2"
+                                        >
+                                            <div className="w-3 h-3 rounded-full shadow-sm" style={{ backgroundColor: t.color }}></div>
+                                            {t.name}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+
                         {isAuth ? (
                             <div className="relative">
                                 <button
-                                    onClick={() => setShowProfile(!showProfile)}
+                                    onClick={() => { setShowProfile(!showProfile); setShowTheme(false); }}
                                     className="flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-white/5 transition-all"
                                 >
                                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-400 to-accent-500 flex items-center justify-center text-sm font-bold text-white">

@@ -205,14 +205,14 @@ export default function InterviewSession() {
                 <div className="flex items-center gap-3">
                     <button
                         onClick={toggleCamera}
-                        className="p-2 rounded-lg hover:bg-white/10 text-gray-300 transition-colors"
+                        className="p-2 rounded-lg hover:bg-gray-900/10 text-gray-300 transition-colors"
                         title={cameraOn ? "Turn off camera" : "Turn on camera"}
                     >
                         {cameraOn ? <Video className="w-5 h-5" /> : <VideoOff className="w-5 h-5 text-danger-400" />}
                     </button>
                     <button
                         onClick={toggleFullscreen}
-                        className="p-2 rounded-lg hover:bg-white/10 text-gray-300 hidden sm:block transition-colors"
+                        className="p-2 rounded-lg hover:bg-gray-900/10 text-gray-300 hidden sm:block transition-colors"
                     >
                         {isFullscreen ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
                     </button>

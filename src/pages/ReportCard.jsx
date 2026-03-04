@@ -54,7 +54,7 @@ export default function ReportCard() {
                         </h1>
                     </div>
                     <div className="flex gap-3 w-full md:w-auto">
-                        <button className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-xl glass text-gray-300 hover:text-white hover:bg-white/10 transition-colors border border-surface-border">
+                        <button className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-xl glass text-gray-300 hover:text-white hover:bg-gray-900/10 transition-colors border border-surface-border">
                             <Share2 className="w-4 h-4" /> Share
                         </button>
                         <button className="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-medium shadow-lg shadow-primary-500/20 transition-all">

@@ -6,6 +6,7 @@ import DomainSelection from './pages/DomainSelection';
 import InterviewSession from './pages/InterviewSession';
 import ReportCard from './pages/ReportCard';
 import Login from './pages/Login';
+import UnderConstruction from './pages/UnderConstruction';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/domains" element={<DomainSelection />} />
           <Route path="/interview/:domainId" element={<InterviewSession />} />
+          <Route path="/interview-construction/:companyId/:roleId" element={<UnderConstruction />} />
           <Route path="/report" element={<ReportCard />} />
         </Routes>
       </div>

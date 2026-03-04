@@ -134,7 +134,7 @@ export default function Dashboard() {
                                             <XAxis dataKey="session" stroke="#6b7280" tick={{ fill: '#6b7280', fontSize: 12 }} axisLine={false} tickLine={false} />
                                             <YAxis stroke="#6b7280" tick={{ fill: '#6b7280', fontSize: 12 }} axisLine={false} tickLine={false} domain={[0, 100]} />
                                             <Tooltip
-                                                contentStyle={{ backgroundColor: '#1a1730', borderColor: '#2e2a4a', borderRadius: '0.5rem', color: '#e2e8f0' }}
+                                                contentStyle={{ backgroundColor: '#1a1730', borderColor: '#2e2a4a', borderRadius: '0.5rem', color: '#2e2a4a' }}
                                                 itemStyle={{ color: '#818cf8', fontWeight: 600 }}
                                             />
                                             <Line
